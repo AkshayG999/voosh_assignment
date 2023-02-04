@@ -12,10 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
-
 import { useDispatch, useSelector } from 'react-redux';
-import { userLogin } from '../store/actions/authAction';
 import { SUCCESS_MESSAGE_CLEAR, ERROR_CLEAR, USER_LOGOUT_SUCCESS } from '../store/types/authType'
 import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
@@ -75,7 +72,7 @@ export default function Navbar() {
 
   }
 
-  const handleOrder = (e)=>{
+  const handleOrder = (e) => {
     handleCloseUserMenu()
     navigate('/addorder')
   }
@@ -169,7 +166,11 @@ export default function Navbar() {
                 {page}
               </Button>
             ))}
+            <MenuItem onClick={(e) => handleOrder(e)}>
+              <Typography textAlign="center" >Add Order</Typography>
+            </MenuItem>
           </Box>
+
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -195,9 +196,6 @@ export default function Navbar() {
             >
               <MenuItem onClick={handleCloseUserMenu}>
                 <Typography textAlign="center"  >Profile</Typography>
-              </MenuItem>
-              <MenuItem onClick={(e)=>handleOrder(e)}>
-                <Typography textAlign="center" >+Add Order</Typography>
               </MenuItem>
               <MenuItem onClick={(e) => handelLogout(e)}>
                 <Typography textAlign="center">Logout</Typography>

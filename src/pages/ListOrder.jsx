@@ -3,21 +3,15 @@ import { useEffect } from 'react'
 import Navbar from './Navbar'
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
-
 import { useDispatch, useSelector } from 'react-redux';
 import { getOrder } from '../store/actions/authAction';
-import { SUCCESS_MESSAGE_CLEAR, ERROR_CLEAR } from '../store/types/authType'
 import { useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2'
-
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -118,12 +112,9 @@ export default function ListOrder() {
                     <Typography variant="body2">
                       Total price: ₹ {e.sub_total}
                       <br />
-                      {'"a benevolent smile"'}
+                     
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small">Learn More</Button>
-                  </CardActions>
                 </Card>
               </Item>
             </Grid>

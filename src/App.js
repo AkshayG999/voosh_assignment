@@ -5,12 +5,8 @@ import Login from "./pages/Login";
 import NotFound from './pages/PageNotFound'
 import AddOrder from "./pages/AddOrder";
 import ListOrder from "./pages/ListOrder";
-
 import { useDispatch, useSelector } from 'react-redux';
-// import { userLogin } from '../store/actions/authAction';
-// import { SUCCESS_MESSAGE_CLEAR, ERROR_CLEAR } from '../store/types/authType'
-import { useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2'
+ 
 
 
 function App() {

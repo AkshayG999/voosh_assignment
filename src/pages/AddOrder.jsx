@@ -2,20 +2,13 @@ import * as React from 'react';
 import { useState, useEffect } from "react";
 import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
-// import FilledInput from '@mui/material/FilledInput';
-// import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
-// import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Link, Typography } from '@mui/material';
 import { Container, Stack } from '@mui/system';
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-// import Alert from '@mui/material/Alert';
-// import AlertTitle from '@mui/material/AlertTitle';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { createOrder } from '../store/actions/authAction';
 import { SUCCESS_MESSAGE_CLEAR, ERROR_CLEAR } from '../store/types/authType'
